@@ -1,0 +1,23 @@
+name: Deploy ui
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ui/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout app
+      uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
+    - name: Build ui
+      run: |
+        cd ui
+        npm install
+        npm run build
