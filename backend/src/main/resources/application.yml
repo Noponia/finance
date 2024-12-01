@@ -1,0 +1,38 @@
+taxData:
+  - year: 2024-25
+    brackets:
+      - income:
+          lower: 0
+          upper: 18200
+        amount:
+          base: 0
+          rate: 0
+          starting: 0
+      - income:
+          lower: 18201
+          upper: 45000
+        amount:
+          base: 0
+          rate: 0.16
+          starting: 18200
+      - income:
+          lower: 45001
+          upper: 135000
+        amount:
+          base: 4288
+          rate: 0.30
+          starting: 45000
+      - income:
+          lower: 135001
+          upper: 190000
+        amount:
+          base: 31288
+          rate: 0.37
+          starting: 135000
+    baller:
+      income:
+        lower: 190001
+      amount:
+        base: 51638
+        rate: 0.45
+        starting: 190000

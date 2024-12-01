@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "8443:8443"
+  ui:
+    build: ../../web/finance
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
