@@ -11,6 +11,8 @@ jobs:
       id-token: write
       contents: read
     steps:
+      - run: |
+          echo "OIDC Token: ${{ secrets.GITHUB_TOKEN }}"
       - uses: 'google-github-actions/auth@v2'
         with:
           workload_identity_provider: 'projects/${{ vars.PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ vars.WIF_POOL }}/providers/${{ vars.WIF_PROVIDER }}'
