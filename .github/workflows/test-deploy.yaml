@@ -7,6 +7,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: dev
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - uses: 'google-github-actions/auth@v2'
         with:
